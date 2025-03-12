@@ -6,7 +6,7 @@ services:
     container_name: postgres_container
     restart: always
     env_file:
-      - .env  # 🔹 Charge les variables d'environnement depuis le fichier .env
+      - .env
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
