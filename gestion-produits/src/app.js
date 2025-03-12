@@ -5,6 +5,9 @@ const sequelize = require("./config/database");
 const app = express();
 app.use(express.json());
 
+const productRoutes = require("./routes/productRoutes");
+app.use("/products", productRoutes);
+
 app.get("/", (req, res) => {
   res.send("Bienvenue sur l'API Gestion des Produits !");
 });
