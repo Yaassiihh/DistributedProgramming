@@ -12,6 +12,8 @@ app.get("/", (req, res) => {
   res.send("Bienvenue sur l'API Gestion des Produits !");
 });
 
+require("./models/product");
+
 sequelize.sync().then(() => {
   console.log("📦 Base de données synchronisée !");
 });

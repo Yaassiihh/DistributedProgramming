@@ -1,13 +1,14 @@
 const Product = require("../models/product");
 
 exports.createProduct = async (req, res) => {
-    try {
-        const { name, price, stock } = req.body;
-        const product = await Product.create({ name, price, stock });
-        res.status(201).json(product);
-    } catch (error) {
-        res.status(500).json({ error: "Erreur lors de la création du produit." });
-    }
+  try {
+    const { name, price, stock } = req.body;
+    const produit = await Product.create({ name, price, stock });
+    res.status(201).json(produit);
+  } catch (error) {
+    console.error("❌ Erreur création produit :", error); // 👈 AJOUT
+    res.status(500).json({ error: "Erreur lors de la création du produit." });
+  }
 };
 
 exports.getAllProducts = async (req, res) => {

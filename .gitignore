@@ -1,0 +1,4 @@
+# Fichiers sensibles à ignorer
+.env
+gestion-produits/.env
+gestion-commandes/.env

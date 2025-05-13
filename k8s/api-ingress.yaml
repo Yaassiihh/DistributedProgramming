@@ -9,10 +9,17 @@ spec:
     - host: produits.local
       http:
         paths:
-          - path: /
+          - path: /products
             pathType: Prefix
             backend:
               service:
                 name: api-service
                 port:
                   number: 3000
+          - path: /orders
+            pathType: Prefix
+            backend:
+              service:
+                name: api-commandes-service
+                port:
+                  number: 3001
