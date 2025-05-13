@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api
+          image: api_image:latest  # je dois le remplacer par l'image docker réelle après que je l'ai mis sur Docker Hub
+          imagePullPolicy: Never 
+          ports:
+            - containerPort: 3000
+          env:
+            - name: POSTGRES_DB
+              value: "produits_db"
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_PASSWORD
+            - name: DB_HOST
+              value: "postgres"
+            - name: POSTGRES_PORT
+              value: "5432"
