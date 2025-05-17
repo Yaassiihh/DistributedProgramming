@@ -2,3 +2,4 @@
 .env
 gestion-produits/.env
 gestion-commandes/.env
+.DS_Store
