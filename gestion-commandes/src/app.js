@@ -13,10 +13,10 @@ app.get('/', (req, res) => {
 });
 
 sequelize.sync().then(() => {
-  console.log('📦 Base de données synchronisée !');
+  console.log('Base de données synchronisée !');
 });
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`🚀 Serveur lancé sur http://localhost:${PORT}`);
+  console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });

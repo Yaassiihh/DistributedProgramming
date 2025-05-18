@@ -26,7 +26,7 @@ exports.createOrder = async (req, res) => {
 
     res.status(201).json(order);
   } catch (error) {
-  console.error("❌ Erreur lors de la création de la commande :", error);
+  console.error("Erreur lors de la création de la commande :", error);
   res.status(500).json({ error: error.message || "Erreur lors de la création de la commande." });
 }
 };

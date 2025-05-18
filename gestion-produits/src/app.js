@@ -15,10 +15,10 @@ app.get("/", (req, res) => {
 require("./models/product");
 
 sequelize.sync().then(() => {
-  console.log("📦 Base de données synchronisée !");
+  console.log("Base de données synchronisée !");
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Serveur lancé sur http://localhost:${PORT}`);
+  console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
