@@ -370,7 +370,7 @@ curl -X DELETE http://produits.local/orders/1 \
 
 ---
 
-## Structure du projet
+## Structure du projet 
 
 ```
 gestion-commandes/

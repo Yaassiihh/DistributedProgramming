@@ -9,7 +9,7 @@ app.use(express.json());
 app.use('/orders', orderRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Bienvenue sur l\'API Gestion des Commandes !');
+  res.send('API Gestion des Commandes');
 });
 
 sequelize.sync().then(() => {

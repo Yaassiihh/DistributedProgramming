@@ -9,7 +9,7 @@ const productRoutes = require("./routes/productRoutes");
 app.use("/products", productRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Bienvenue sur l'API Gestion des Produits !");
+  res.send("API Gestion des Produits");
 });
 
 require("./models/product");
