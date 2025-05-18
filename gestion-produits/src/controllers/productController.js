@@ -6,7 +6,7 @@ exports.createProduct = async (req, res) => {
     const produit = await Product.create({ name, price, stock });
     res.status(201).json(produit);
   } catch (error) {
-    console.error("❌ Erreur création produit :", error); // 👈 AJOUT
+    console.error("Erreur création produit :", error);
     res.status(500).json({ error: "Erreur lors de la création du produit." });
   }
 };

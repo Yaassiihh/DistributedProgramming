@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: gestion-produits-image:latest  # je dois le remplacer par l'image docker réelle après que je l'ai mis sur Docker Hub
+          image: gestion-produits-image:latest
           imagePullPolicy: Never 
           ports:
             - containerPort: 3000

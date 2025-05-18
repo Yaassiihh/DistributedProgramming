@@ -15,7 +15,7 @@ const sequelize = new Sequelize(
 
 sequelize
   .authenticate()
-  .then(() => console.log("✅ Connexion à PostgreSQL réussie !"))
-  .catch((err) => console.error("❌ Erreur de connexion à la DB :", err));
+  .then(() => console.log("Connexion à PostgreSQL réussie !"))
+  .catch((err) => console.error("Erreur de connexion à la DB :", err));
 
 module.exports = sequelize;
